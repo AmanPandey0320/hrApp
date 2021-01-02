@@ -10,3 +10,14 @@
 .my-nav{
     background-color:#f3f3f3 ;
 }
+.my-box{
+    max-width: 20%;
+    float: right;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.my-div-btn:hover{
+    cursor: pointer;
+}
+.my-tron{
+    background-color: aqua;
+}
