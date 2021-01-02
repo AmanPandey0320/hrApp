@@ -1,10 +1,11 @@
 <!doctype html>
 <html lang="en">
-  <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
-  <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
-  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
   <head>
     <title>Welcome to ManageHR</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -15,7 +16,40 @@
   </head>
   <body id="root" >
 
-    Test 4
+    <nav class="navbar navbar-expand-xl my-nav navbar-light my-nav">
+        <a class="navbar-brand text-danger" style="font-family: 'Pacifico';" href="#">ManageHr</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation"></button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active my-card">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active dropdown"       id="employeeDropDown" >
+                  <a class="nav-link" href="#">Tools
+                    <div class="dropdown-content col">
+                      <a class="row dropdown-item" href="#">Salary tool</a>
+                      <a class="row dropdown-item" href="#">Enployee tool</a>
+                      <a class="row dropdown-item" href="#">Our services</a>
+                    </div>
+                  </a>
+              </li>
+                <li class="nav-item active dropdown"       id="employeeDropDown" >
+                    <a class="nav-link" href="#">
+                      <div class="dropdown-content col">
+                        <a class="row dropdown-item" href="#">Profile</a>
+                        <a class="row dropdown-item" href="#">Attendence</a>
+                        <a class="row dropdown-item" href="#">Notices</a>
+                      </div>
+                    </a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <button class="btn btn-outline-dark mr-2 my-2 my-sm-0" type="submit">Sign-In</button>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign-Up</button>
+            </form>
+        </div>
+    </nav>
     
 
     <!-- Optional JavaScript -->
