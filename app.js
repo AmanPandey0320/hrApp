@@ -37,11 +37,15 @@ app.use('/',express.static('assets'));
 app.use('/',express.static('views'));
 
 //api routes
-app.use('/signup',signup);
+app.use('/register',signup);
 
 //home route
 app.get('/home', (req, res) => {
   res.sendFile(path.join(__dirname,'./views/home.html'));
+});
+
+app.get('/signup',(req,res)=>{
+  res.sendFile(path.join(__dirname,'./views/signup.html'));
 });
 
 

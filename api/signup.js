@@ -7,18 +7,10 @@ const db = admin.firestore();
 route.use(bodyParser.json());
 route.use(bodyParser.urlencoded({extended:true}));
 
-var json={
-    id:"1245",
-    name:"Aman Kr pandey",
-    role:"developer",
-};
-
-route.get('/',(req,res)=>{
-    db.collection('check').add({foo:"aman"}).then((value)=>{
-        res.json(json);
-    }).catch((error)=>{
-        console.log(error.message);
-    });
+route.post('/',(req,res)=>{
+    var data = req.body;
+    // console.log(data);
+    res.json(data);
 });
 
 module.exports = route;
