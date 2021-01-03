@@ -1,0 +1,31 @@
+.center{
+    display: block;
+    margin: auto;
+}
+.google{
+    background-color: rgb(223, 119, 101);
+    
+}
+.google:focus{
+    background-color: rgb(187, 79, 60);
+    border-color: transparent;
+    box-shadow: none;
+}
+.google:hover{
+    background-color: rgb(196, 90, 71);
+    border-color: transparent;
+    box-shadow: none;
+}
+.card{
+    width: 60%;
+    display: block;
+    margin: auto;
+}
+.form-control{
+    border-bottom: 2px solid rgb(84, 70, 143);
+}
+.form-control:focus{
+    border-color: transparent;
+    box-shadow: none;
+    border-bottom: 2px solid rgb(84, 70, 143);
+}

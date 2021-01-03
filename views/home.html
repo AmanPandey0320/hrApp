@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/styles.css">
   </head>
   <body id="root">
@@ -26,26 +27,30 @@
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active dropdown"id="employeeDropDown" >
-                  <a class="nav-link" href="#">Tools
+                  <a class="nav-link" href="#">Tools<i class="fa fa-angle-right" style="margin-left: 4px;"></i>
                     <div class="dropdown-content col">
                       <a class="row dropdown-item" href="#">Salary tool</a>
-                      <a class="row dropdown-item" href="#">Enployee tool</a>
+                      <a class="row dropdown-item" href="#">Employee tool</a>
                       <a class="row dropdown-item" href="#">Our services</a>
                     </div>
                   </a>
               </li>
             </ul>
               <button id="in_toggler" class="btn btn-outline-dark mr-2 my-2 my-sm-0" data-toggle="modal" data-target="#in_modal">Sign-In</button>
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign-Up</button>
+              <button id="in_toggler" class="btn btn-outline-dark mr-2 my-2 my-sm-0" data-toggle="modal" data-target="#up_modal">Sign-Up</button>
         </div>
     </nav>
 
     <!-- Modal -->
     <div class="modal fade" id="in_modal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-      <div class="modal-dialog" role="document">
+      <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Sign-In</h5>
+                <!-- <h5 class="modal-title">Sign-In</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button> -->
+                  <a class="text-danger mx-4" style="font-family: 'Pacifico'; text-align: center;" href="#">ManageHr</a>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -53,16 +58,19 @@
           <div class="modal-body">
             <div class="container-fluid col">
               <div class="row m-1">
-                <input id="email_txt" class="form-control" placeholder="Email" type="email" required>
+                <input id="email_txt" class="form-control my-2" placeholder="Email" type="email" required>
               </div>
               <div class="row m-1">
-                <input id="password_txt" class="form-control" placeholder="password" type="password" required>
+                <input id="password_txt" class="form-control my-2" placeholder="Password" type="password" required>
               </div>
-              <div id="resetBtn" class="text-primary ml-1 my-div-btn">Forget password?</div>
+              <div id="resetBtn" class="text-primary ml-1 my-div-btn" style="text-align: right;">Forget password?</div>
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Sign In</button>
+            <div class="text-center">
+            <button type="button" class="btn btn-primary"><i class="fa fa-key" style="margin-right: 5px;"></i>Sign In</button>
+            <a href="./signup.html" class="signup"><button type="button" class="btn btn-primary">Create New Account</button></a>
+          </div>
           </div>
         </div>
       </div>
