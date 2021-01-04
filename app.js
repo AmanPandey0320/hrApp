@@ -1,7 +1,5 @@
 const express = require('express');
 let ejs =require('ejs');
-const e = require('express');
-const { query } = require('express');
 const app = express();
 const path = require('path');
 const port = 5560;
@@ -14,9 +12,6 @@ const bodyParser = require('body-parser');
 
 //api routes
 const signup = require('./api/signup');
-
-
-const { error } = require('jquery');
 
 
 
@@ -39,14 +34,21 @@ app.use('/',express.static('views'));
 //api routes
 app.use('/register',signup);
 
+//error routes
+app.get('/error',(req,res)=>{
+  res.render('error');
+});
+
 //home route
 app.get('/home', (req, res) => {
   res.sendFile(path.join(__dirname,'./views/home.html'));
 });
 
+//signup route
 app.get('/signup',(req,res)=>{
   res.sendFile(path.join(__dirname,'./views/signup.html'));
 });
+
 
 
 

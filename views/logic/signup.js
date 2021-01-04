@@ -16,7 +16,7 @@ function registerUser(){
     var confirm =$('#confirm_password').val().trim();
     var password = $('#password').val().trim();
     
-    if(name.lenght == 0 || email.lenght == 0 || companyName.lenght == 0 || companyPhone == 0 || employeeCount == 0 || confirm == 0 || password == 0 ){
+    if(name.lenght == 0 || email.lenght == 0 || companyName.lenght == 0 || companyPhone.lenght == 0 || employeeCount.lenght == 0 || confirm.lenght == 0 || password.lenght == 0 ){
         alert('Please fill all the details correctly!')
     }else{
         var data = {
@@ -33,7 +33,14 @@ function registerUser(){
         xhr.setRequestHeader("Content-type", "application/json");
         xhr.onreadystatechange = function(){
             if(this.readyState == 4){
-                console.log(this.response);
+                if(this.status == 200){
+                    var resData = JSON.parse(this.response);
+                    console.log(resData);
+                    sessionStorage.setItem('manageHrSessionUID',resData.uid);
+                    location.href = 'home';
+                }else{
+                    console.log(this.response);
+                }
             }
         };
         xhr.send(sender);
