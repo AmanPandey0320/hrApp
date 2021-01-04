@@ -8,21 +8,19 @@ const port = 5560;
 
 const nodemailer=require('nodemailer');
 const fetch =require('node-fetch');
-const admin = require('firebase-admin');
+const admin = require('./admin');
+
 const bodyParser = require('body-parser');
 
-const serviceAccount=require('./serviceAccountKey.json');
+//api routes
+const signup = require('./api/signup');
+
+
 const { error } = require('jquery');
 
 
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://app2pcon2k20.firebaseio.com"
-});
 
 const db=admin.firestore();
-
-
 app.set('view engine', 'ejs');
 
 //email transporter
@@ -38,9 +36,16 @@ app.use('/',bodyParser.json());
 app.use('/',express.static('assets'));
 app.use('/',express.static('views'));
 
+//api routes
+app.use('/register',signup);
+
 //home route
 app.get('/home', (req, res) => {
   res.sendFile(path.join(__dirname,'./views/home.html'));
+});
+
+app.get('/signup',(req,res)=>{
+  res.sendFile(path.join(__dirname,'./views/signup.html'));
 });
 
 
