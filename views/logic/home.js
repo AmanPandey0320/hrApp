@@ -27,9 +27,25 @@ $('#sign_up_btn').click(()=>{
     location.href='signup';
 });
 
-function signIn(){
+$('#user_login_btn').click(()=>{
+    var email  = $('#email_txt').val().trim();
+    var password = $('#password_txt').val().trim();
+    if(email.length == 0 || password.length == 0){
+        alert('Please fill all the details');
+    }else if(password.length<6){
+        alert('Password should have atleast 6 characters!');
+    }else{
+        signIn(email,password);
+    }
+});
+$('#signout').on('click',function(){
+    sessionStorage.removeItem('manageHrSessionUID');
+    location.href = 'home';
+});
 
-    firebase.auth().signInWithEmailAndPassword()
+function signIn(e,p){
+
+    firebase.auth().signInWithEmailAndPassword(e,p)
   .then(({user}) => {
       var id = user.uid;
     sessionStorage.setItem('manageHrSessionUID',`${id}`);

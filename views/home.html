@@ -37,8 +37,13 @@
                   </a>
               </li>
             </ul>
-            <span id="oldUser_span" style="display: none;">
+            <span id="oldUser_span" class="dropdown" style="display: none;">
               <img src="https://firebasestorage.googleapis.com/v0/b/app2pcon2k20.appspot.com/o/website%20Assets%2Fuser.png?alt=media&token=c822d32f-9b86-4c3c-aaf3-9fbe0391da9f" class="rounded img-fluid mx-1"><span id="UserName_txt" class="text-dark" style="font-family:'Playfair Display';" >New User</span>
+              <i class="fa fa-angle-down" style="margin-left: 2px;"></i>
+              <div class="dropdown-content col" >
+                <a class="row dropdown-item" href="#">Settings</a>
+                <a id="signout" class="row btn dropdown-item">Sign-out</a>
+              </div>
             </span>
             <span id="newUser_span" style="display: none;">
               <button id="in_toggler" class="btn btn-outline-dark mr-2 my-2 my-sm-0" data-toggle="modal" data-target="#in_modal">Sign-In</button>
@@ -74,8 +79,8 @@
           </div>
           <div class="modal-footer">
             <div class="text-center">
-            <button type="button" class="btn btn-primary"><i class="fa fa-key" style="margin-right: 5px;"></i>Sign In</button>
-            <a href="./signup.html" class="signup"><button type="button" class="btn btn-primary">Create New Account</button></a>
+            <button id="user_login_btn" type="button" class="btn btn-primary"><i class="fa fa-key" style="margin-right: 5px;"></i>Sign In</button>
+            <a href="signup" class="signup"><button type="button" class="btn btn-primary">Create New Account</button></a>
           </div>
           </div>
         </div>
