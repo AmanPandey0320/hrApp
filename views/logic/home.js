@@ -1,15 +1,5 @@
-var firebaseConfig = {
-    apiKey: "AIzaSyAHeiSqmtWHA5qMKPyU6dNR0wXuAmxvfME",
-    authDomain: "app2pcon2k20.firebaseapp.com",
-    databaseURL: "https://app2pcon2k20.firebaseio.com",
-    projectId: "app2pcon2k20",
-    storageBucket: "app2pcon2k20.appspot.com",
-    messagingSenderId: "502599994077",
-    appId: "1:502599994077:web:6c985234b8b2ddf8d66934"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
 
+var xhr = new XMLHttpRequest();
 
 var uid =sessionStorage.getItem('manageHrSessionUID');
 // console.log(uid);
@@ -30,12 +20,15 @@ $('#sign_up_btn').click(()=>{
 $('#user_login_btn').click(()=>{
     var email  = $('#email_txt').val().trim();
     var password = $('#password_txt').val().trim();
+    var type = 'employee';
+    if($('#type_box').prop("checked") == true)
+    type = 'company';
     if(email.length == 0 || password.length == 0){
         alert('Please fill all the details');
     }else if(password.length<6){
         alert('Password should have atleast 6 characters!');
     }else{
-        signIn(email,password);
+        signIn(email,password,type);
     }
 });
 $('#signout').on('click',function(){
@@ -43,15 +36,24 @@ $('#signout').on('click',function(){
     location.href = 'home';
 });
 
-function signIn(e,p){
-
-    firebase.auth().signInWithEmailAndPassword(e,p)
-  .then(({user}) => {
-      var id = user.uid;
-    sessionStorage.setItem('manageHrSessionUID',`${id}`);
-    location.href = 'home';
-  })
-  .catch((error) => {
-    location.href = 'error';
-  });
+function signIn(e,p,t){
+    var data = {
+        email:e,
+        password:p,
+        type:t
+    };
+    var sender = JSON.stringify(data);
+    xhr.open('POST','signin',true);
+    xhr.setRequestHeader("Content-type", "application/json");
+    xhr.onreadystatechange = function (){
+        if(this.readyState == 4){
+            if(this.status == 200){
+                var uid = this.response;
+                // console.log(uid);
+                sessionStorage.setItem('manageHrSessionUID',uid);
+                location.href = 'home';
+            }
+        }
+    };
+    xhr.send(sender);
 }

@@ -12,6 +12,7 @@ const bodyParser = require('body-parser');
 
 //api routes
 const signup = require('./api/signup');
+const signin = require('./api/signin');
 
 
 
@@ -33,10 +34,14 @@ app.use('/',express.static('views'));
 
 //api routes
 app.use('/register',signup);
+app.use('/signin',signin);
 
 //error routes
 app.get('/error',(req,res)=>{
-  res.render('error');
+  res.render('error',{
+    code:req.query.code,
+    message:req.query.message,
+  });
 });
 
 //home route
@@ -49,6 +54,19 @@ app.get('/signup',(req,res)=>{
   res.sendFile(path.join(__dirname,'./views/signup.html'));
 });
 
+//verify route
+app.get('/verify',(req,res)=>{
+  var uid = req.query.uid;
+  console.log(uid);
+  admin.auth().updateUser(uid,{
+    emailVerified:true,
+  }).then((user)=>{
+    res.sendFile(path.join(__dirname,'./views/home.html'));
+  }).catch((error)=>{
+    console.log(error);
+    res.render('error');
+  });
+});
 
 
 

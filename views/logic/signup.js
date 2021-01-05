@@ -34,12 +34,13 @@ function registerUser(){
         xhr.onreadystatechange = function(){
             if(this.readyState == 4){
                 if(this.status == 200){
-                    var resData = JSON.parse(this.response);
-                    console.log(resData);
-                    sessionStorage.setItem('manageHrSessionUID',resData.uid);
+                    alert('Check your inbox! We have just mailed you.')
                     location.href = 'home';
                 }else{
-                    console.log(this.response);
+                    var error = JSON.parse(this.response);
+                    var code = error.code;
+                    var message = error.message;
+                    location.href = `error?code=${code}&message=${message}`;
                 }
             }
         };
