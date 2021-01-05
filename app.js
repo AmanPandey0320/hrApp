@@ -13,8 +13,8 @@ const bodyParser = require('body-parser');
 //api routes
 const signup = require('./api/signup');
 const signin = require('./api/signin');
-
-
+const employee = require('./employee');
+const api = require('./api/api');
 
 const db=admin.firestore();
 app.set('view engine', 'ejs');
@@ -35,6 +35,8 @@ app.use('/',express.static('views'));
 //api routes
 app.use('/register',signup);
 app.use('/signin',signin);
+app.use('/employee',employee);
+app.use('/api',api);
 
 //error routes
 app.get('/error',(req,res)=>{
@@ -53,6 +55,8 @@ app.get('/home', (req, res) => {
 app.get('/signup',(req,res)=>{
   res.sendFile(path.join(__dirname,'./views/signup.html'));
 });
+
+
 
 //verify route
 app.get('/verify',(req,res)=>{
