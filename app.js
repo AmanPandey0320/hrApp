@@ -15,6 +15,7 @@ const signup = require('./api/signup');
 const signin = require('./api/signin');
 const employee = require('./employee');
 const api = require('./api/api');
+const company = require('./company');
 
 const db=admin.firestore();
 app.set('view engine', 'ejs');
@@ -37,6 +38,8 @@ app.use('/register',signup);
 app.use('/signin',signin);
 app.use('/employee',employee);
 app.use('/api',api);
+app.use('/company',company);
+
 
 //error routes
 app.get('/error',(req,res)=>{
@@ -68,7 +71,10 @@ app.get('/verify',(req,res)=>{
     res.sendFile(path.join(__dirname,'./views/home.html'));
   }).catch((error)=>{
     console.log(error);
-    res.render('error');
+    res.render('error',{
+      code:error.code,
+      message:error.message,
+    });
   });
 });
 
