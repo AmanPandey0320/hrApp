@@ -76,7 +76,6 @@ $('#submitBtn').on('click',function(){
     xhr.setRequestHeader("Content-type", "application/json");
     xhr.onreadystatechange = function () { 
         if(this.readyState == 4){
-            console.log(this.status);
             console.log(this.response);
             // TODO: react according to server responce
         }
