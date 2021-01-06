@@ -16,7 +16,7 @@ function registerUser(){
     var confirm =$('#confirm_password').val().trim();
     var password = $('#password').val().trim();
     
-    if(name.lenght == 0 || email.lenght == 0 || companyName.lenght == 0 || companyPhone.lenght == 0 || employeeCount.lenght == 0 || confirm.lenght == 0 || password.lenght == 0 ){
+    if(name.length == 0 || email.length == 0 || companyName.length == 0 || companyPhone.length == 0 || employeeCount.length == 0 || confirm.length == 0 || password.length == 0 ){
         alert('Please fill all the details correctly!')
     }else{
         var data = {
