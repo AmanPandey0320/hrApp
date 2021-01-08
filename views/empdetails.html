@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/duotone.css"
+        integrity="sha384-R3QzTxyukP03CMqKFe0ssp5wUvBPEyy9ZspCB+Y01fEjhMwcXixTyeot+S40+AjZ" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/fontawesome.css"
+        integrity="sha384-eHoocPgXsiuZh+Yy6+7DsKAerLXyJmu2Hadh4QYyt+8v86geixVYwFqUvMU8X90l" crossorigin="anonymous" />
+
+
+
+    <link rel="stylesheet" href="./styles/empdetails.css">
+    <title>Employee Details</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="header mx-5 my-3">
+            <a class="text-danger" style="font-family: 'Pacifico'; font-size: 30px;" href="#">ManageHr</a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-4" style="margin-right : 0; padding-right: 0; font-style: normal;">
+                    <div class="card">
+                        <img src="./images.png" height="100px" width="100px" alt="profile_pic">
+                        <h1>user_name</h1>
+                        <p>user_position</p>
+                        <p>company_name</p>
+                        <p>type_of_employment</p>
+                        <hr style="margin-top: 10px;">
+                        <p class="icon"><i class="fas fa-phone-alt"></i>work_phone</p>
+                        <hr>
+                        <p class="icon"><i class="fas fa-envelope"></i>work_email</p>
+                    </div>
+                </div>
+                <div class="col-8" style="margin-left: 0; padding-left: 0;">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    <b>General Info</b>
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col-4">Name</div>
+                                        <div class="col-8" id="first_name">first_name middle_name last_name</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Gender</div>
+                                        <div class="col-8" id="gender">user_gender</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Birthdate</div>
+                                        <div class="col-8" id="dob">user_dob</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Address </div>
+                                        <div class="col-8" id="address">user_address <i class="fas fa-edit"
+                                                data-bs-toggle="modal" data-bs-target="#add"></i></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Marital Status </div>
+                                        <div class="col-8" id="marital_status">marital_status <i class="fas fa-edit"
+                                                data-bs-toggle="modal" data-bs-target="#myModal"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <b>Contact Info</b>
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <h5>Work</h5>
+                                    <p>work_email</p>
+                                    <p>work_phone</p>
+                                    <h5>Personal</h5>
+                                    <p>user_email</p>
+                                    <p>user_phone</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <b>Job Info</b>
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col-4">Company ID</div>
+                                        <div class="col-8" id="cmp_id">company_id</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Company Name</div>
+                                        <div class="col-8" id="cmp_name">cmp_name</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Employee ID</div>
+                                        <div class="col-8" id="emp_id">employee_id</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Department</div>
+                                        <div class="col-8" id="deptTxt">emp_department </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Position</div>
+                                        <div class="col-8" id="position">position </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Type of employment</div>
+                                        <div class="col-8" id="type">type </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Work Location</div>
+                                        <div class="col-8" id="location">work_location</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Start Date</div>
+                                        <div class="col-8" id="date">start_date</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <b>Bank Info</b>
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col-4">Bank name</div>
+                                        <div class="col-8" id="bank_name">bank_name <i class="fas fa-edit"
+                                                data-bs-toggle="modal" data-bs-target="#bname"></i></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Branch name</div>
+                                        <div class="col-8" id="branch_name">branch_name <i class="fas fa-edit"
+                                                data-bs-toggle="modal" data-bs-target="#brname"></i></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Bank Address</div>
+                                        <div class="col-8" id="address">bank_address <i class="fas fa-edit"
+                                                data-bs-toggle="modal" data-bs-target="#badd"></i></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Account Number</div>
+                                        <div class="col-8" id="account">account_number <i class="fas fa-edit"
+                                                data-bs-toggle="modal" data-bs-target="#baccount"></i></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">IFSC code</div>
+                                        <div class="col-8" id="ifsc_code">ifsc_code <i class="fas fa-edit"
+                                                data-bs-toggle="modal" data-bs-target="#bifsc"></i></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Account Holder's Name</div>
+                                        <div class="col-8" id="holder_name">account_holder_name <i class="fas fa-edit"
+                                                data-bs-toggle="modal" data-bs-target="#baccname"></i></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Type of Account</div>
+                                        <div class="col-8" id="type">type_of_account <i class="fas fa-edit"
+                                                data-bs-toggle="modal" data-bs-target="#bacctype"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    <b>Emergency Contact Info</b>
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col-4">Name</div>
+                                        <div class="col-8" id="emg_name">name</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Address</div>
+                                        <div class="col-8" id="eaddress">address <i class="fas fa-edit"
+                                                data-bs-toggle="modal" data-bs-target="#eadd"></i></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Phone</div>
+                                        <div class="col-8" id="phone">number <i class="fas fa-edit"
+                                            data-bs-toggle="modal" data-bs-target="#ph"></i></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Relation</div>
+                                        <div class="col-8" id="relation">relation</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p>Select your Marital Status</p>
+                </div>
+                <div class="modal-body">
+                    <select>
+                        <option value="1" class="text-muted">Select</option>
+                        <option value="Married">Married</option>
+                        <option value="Single">Single</option>
+                        <option value="Widow">Widow</option>
+                        <option value="Divorced">Divorced</option>
+                        <option value="Separated">Separated</option>
+                        <option value="Cohabitation">Cohabitation</option>
+                        <option value="Registered partnership">Registered partnership</option>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="add" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p>Enter your Address</p>
+                </div>
+                <div class="modal-body">
+                    <input class="form-control" type="text" placeholder="Address Line 1"><br>
+                    <input class="form-control" type="text" placeholder="Address Line 2"><br>
+                    <input class="form-control" type="text" placeholder="Address Line 3">
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="bname" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p>Enter Bank Name</p>
+                </div>
+                <div class="modal-body">
+                    <input class="form-control" type="text">
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="brname" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p>Enter Branch Name</p>
+                </div>
+                <div class="modal-body">
+                    <input class="form-control" type="text">
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="eadd" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p>Enter the Address</p>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control" placeholder="Address Line 1"><br>
+                    <input type="text" class="form-control" placeholder="Address Line 2"><br>
+                    <input type="text" class="form-control" placeholder="Address Line 3">
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="bacctype" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p>Select Type of Account</p>
+                </div>
+                <div class="modal-body">
+                    <select>
+                        <option value="1" class="text-muted">Select</option>
+                        <option value="Savings Account">Savings Account</option>
+                        <option value="Current Account">Current Account</option>
+                        <option value="Recurring Deposit Account">Recurring Deposit Account</option>
+                        <option value="Fixed Deposit Account">Fixed Deposit Account</option>
+                        <option value="DEMAT Account">DEMAT Account</option>
+                        <option value="NRI Account">NRI Account</option>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="badd" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p>Enter Bank Address</p>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control" placeholder="Address Line 1"><br>
+                    <input type="text" class="form-control" placeholder="Address Line 2"><br>
+                    <input type="text" class="form-control" placeholder="Address Line 3">
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="bifsc" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p>Enter IFSC Code</p>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control">
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="baccname" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p>Enter Account Holder's Name</p>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control">
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="baccount" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p>Enter Account Number</p>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control">
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="ph" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p>Enter Phone Number</p>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control">
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
