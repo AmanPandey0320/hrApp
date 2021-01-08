@@ -16,8 +16,9 @@ route.post('/post',(req,res)=>{
     db.collection('company').doc(Cuid).collection('verification').doc(Euid).set(body).then((result)=>{
         res.sendStatus(200);
     }).catch((error)=>{
-        res.status('400').json(error);
     });
 });
+
+
 
 module.exports = route;
