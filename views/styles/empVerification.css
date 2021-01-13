@@ -1,0 +1,113 @@
+.my-card-middle{
+    margin: 2px;
+    padding:2px;
+    font-size:13px;
+}
+.my-card-left{
+    margin: 2px;
+    padding:2px;
+    font-size:13px;
+}
+.my-card-right{
+    margin: 2px;
+    padding:2px;
+    font-size:13px;
+    float: left;
+}
+.img{
+    width: 100%;
+    margin: 1px;
+}
+.img-div{
+    float: left;
+    width: 15%;
+}
+.my-text-div{
+    width:85%;
+    float:right;
+}
+.my-single-item{
+    border-style:solid;
+    border-width:1px;
+    border-color:lightblue;
+    border-radius:5px;
+    padding:3px;
+    box-shadow: 1px 1px 2px lightblue;
+}
+
+@media only screen and (min-width:768px){
+    .img-div{
+        float: left;
+        width: 25%;
+    }
+    .my-text-div{
+        width:75%;
+        float:right;
+    }
+    .my-card-middle{
+        margin: 2px;
+        padding:2px;
+        width: 64%;
+        float: left;
+        font-size:14px;
+    }
+    .my-card-left{
+        margin: 2px;
+        padding:2px;
+        font-size:14px;
+    }
+    .my-card-right{
+        margin: 2px;
+        padding:2px;
+        width: 34%;
+        font-size:14px;
+        float: right;
+    }
+}
+
+@media only screen and (min-width:1000px){
+    .img-div{
+        float: left;
+        width: 15%;
+    }
+    .my-text-div{
+        width:85%;
+        float:right;
+    }
+    .my-card-middle{
+        width: 44%;
+        margin: 2px;
+        padding:2px;
+        font-size:15px;
+    }
+    .my-single-item{
+        border-style:solid;
+        border-width:1px;
+        border-color:lightblue;
+        border-radius:5px;
+        padding:3px;
+        box-shadow: 1px 1px 2px lightblue;
+    }
+    .my-single-item:hover{
+        border-style:solid;
+        border-width:1px;
+        border-color:lightblue;
+        border-radius:5px;
+        padding:3px;
+        box-shadow: 1px 1px 4px rgb(37, 187, 236);
+    }
+    .my-card-left{
+        margin: 2px;
+        padding:2px;
+        font-size:15px;
+        width: 25%;
+        float: left;
+    }
+    .my-card-right{
+        margin: 2px;
+        padding:2px;
+        width: 30%;
+        float: right;
+        font-size:15px;
+    }
+}

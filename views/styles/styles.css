@@ -41,3 +41,15 @@
 .rounded{
     width: 28%;
 }
+.my-card-glow:hover{
+    box-shadow: 2px 2px 15px 10px lightblue;
+    cursor: pointer;
+}
+.my-dashboard{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+}
+.my-card{
+    background-color:#fafcff;
+}

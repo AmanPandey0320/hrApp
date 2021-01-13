@@ -45,6 +45,13 @@ var firebaseConfig = {
           EmPhone:$('#EphoneTxt').val().trim(),
           EmAddress:[$('#Eaddress1').val().trim(),$('#Eaddress2').val().trim(),$('#Eaddress3').val().trim()],
           Emrelation:$('#Erelationship').val().trim(),
+          bank_name:$('#bank_name').val().trim(),
+          branch_name:$('#branch_name').val().trim(),
+          bank_address:[$('#bank_add1').val().trim(),$('#bank_add2').val().trim(),$('#bank_add3').val().trim()],
+          account:$('#account').val().trim(),
+          ifsc_code:$('#ifsc_code').val().trim(),
+          holder_name:$('#holder_name').val().trim(),
+          account_type:$('#account_type').val().trim(),
       };
     //   console.log(empData.empname);
   }

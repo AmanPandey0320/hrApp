@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  <head>
+    <title>ManageHr</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Neuton&display=swap" rel="stylesheet">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/applicationView.css">
+    <link rel="stylesheet" href="./styles/empVerification.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-xl my-nav navbar-light my-nav">
+        <a class="navbar-brand text-danger" style="font-family: 'Pacifico';" href="#">ManageHr</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation"></button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item active dropdown"id="employeeDropDown" >
+                  <a class="nav-link" href="#">Tools<i class="fa fa-angle-right" style="margin-left: 4px;"></i>
+                    <div class="dropdown-content col">
+                      <a class="row dropdown-item" href="#">Salary tool</a>
+                      <a class="row dropdown-item" href="#">Employee tool</a>
+                      <a class="row dropdown-item" href="#">Our services</a>
+                    </div>
+                  </a>
+              </li>
+            </ul>
+            <span id="oldUser_span" class="dropdown">
+              <img src="https://firebasestorage.googleapis.com/v0/b/app2pcon2k20.appspot.com/o/website%20Assets%2Fuser.png?alt=media&token=c822d32f-9b86-4c3c-aaf3-9fbe0391da9f" class="rounded img-fluid mx-1"><span id="UserName_txt" class="text-dark" style="font-family:'Playfair Display';" >New User</span>
+              <i class="fa fa-angle-down" style="margin-left: 2px;"></i>
+              <div class="dropdown-content col" >
+                <a class="row dropdown-item" href="#">Settings</a>
+                <a id="signout" class="row btn dropdown-item">Sign-out</a>
+              </div>
+            </span>
+        </div>
+    </nav>
+    <div class="card my-card-left">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus minus ducimus reiciendis in enim sunt soluta suscipit et recusandae blanditiis hic, voluptates rem quasi facere? Quaerat non quam voluptatum nam!
+    </div>
+    <div id="application-view" class="my-card-middle bg-light card col">
+      <div>
+        <div class="my-1" style="width:25%; margin: auto;">
+          <img src="./assets/profile.png" width="100%">
+        </div>
+        <div class="ml-1"><label>Name: </label><span>Employee name</span></div>
+        <div class="ml-1"><label>ID No: </label><span>Employee name</span></div>
+        <div class="ml-1"><label>Department: </label><span>Employee name</span></div>
+        <div class="ml-1"><label>Position: </label><span>Employee name</span></div>
+        <div class="ml-1"><label>Email: </label><span>Employee name</span></div>
+        <div class="ml-1"><label>Phone: </label><span>Employee name</span></div>
+        <div class="ml-1"><label>Role: </label><span>Employee name</span></div>
+        <div class="ml-1"><label>Gender: </label><span>Employee name</span></div>
+        
+      </div>
+    </div>
+    <div id="verification-list" class="my-card-right">
+    </div>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/babel" src="./logic/component/verification.js"></script>
+    <script src="./logic/empVerification.js"></script>
+  </body>
+</html>

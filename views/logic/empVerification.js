@@ -1,0 +1,1 @@
+var eid = sessionStorage.getItem('manageHrSessionUID');

@@ -16,10 +16,36 @@ route.post('/post',(req,res)=>{
     db.collection('company').doc(Cuid).collection('verification').doc(Euid).set(body).then((result)=>{
         res.sendStatus(200);
     }).catch((error)=>{
-        res.status('401').json(error);
+        res.status('400').json(error);
     });
 });
 
+route.get('/verification',async (req,res)=>{
+    var query = req.query;
+    var uid= query.uid;
+    var data = [];
+    var querySnapshot = db.collection('company').doc(uid).collection('verification');
+    var snapshot = await querySnapshot.get('verification');
+    snapshot.forEach( doc =>{
+        data.push(doc.data());
+    });
+    res.json({
+        result:data
+    });
+});
 
+route.post('/verification',async (req,res)=>{
+    var query = req.query;
+    var uid= query.uid;
+    var data = [];
+    var querySnapshot = db.collection('company').doc(uid).collection('verification');
+    var snapshot = await querySnapshot.get('verification');
+    snapshot.forEach( doc =>{
+        data.push(doc.data());
+    });
+    res.json({
+        result:data
+    });
+});
 
 module.exports = route;
