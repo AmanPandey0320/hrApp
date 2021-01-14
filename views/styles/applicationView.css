@@ -1,0 +1,13 @@
+.my-btn{
+    margin-top: 2px;
+    margin-bottom:2px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.application-div{
+    width:25%; 
+    margin: auto
+}
+.my-application-btn-div{
+    text-align: center
+}

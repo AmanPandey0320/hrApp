@@ -10,7 +10,6 @@ const admin = require('./admin');
 
 const bodyParser = require('body-parser');
 
-
 //api routes
 const signup = require('./api/signup');
 const signin = require('./api/signin');

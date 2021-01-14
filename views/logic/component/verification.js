@@ -1,7 +1,22 @@
 class ApplicationView extends React.Component {
   render() {
     return (
-        <h1>{this.props.name}</h1>
+
+    <div>
+      <div className="my-1 application-div">
+        <img src="../../assets/profile.png" width="100%"></img>
+      </div>
+      <div className="ml-1"><lable>Name: </lable><span>Employee name</span></div>
+      <div className="ml-1"><lable>Name: </lable><span>Employee name</span></div>
+      <div className="ml-1"><lable>Name: </lable><span>Employee name</span></div>
+      <div className="ml-1"><lable>Name: </lable><span>Employee name</span></div>
+      <div className="ml-1"><lable>Name: </lable><span>Employee name</span></div>
+      <div className="ml-1"><lable>Name: </lable><span>Employee name</span></div>
+      <div className="ml-1"><lable>Name: </lable><span>Employee name</span></div>
+      <div className="ml-1"><lable>Name: </lable><span>Employee name</span></div>
+      <div className="ml-1"><lable>Name: </lable><span>Employee name</span></div>
+      <div className="mx-0 container my-application-btn-div"><button id="accept-application" className="my-btn btn btn-outline-success btn-sm" >Accept</button><button id="decline-application" className="my-btn btn btn-outline-success btn-sm" >Decline</button></div>
+    </div>
     );
   }
 }
