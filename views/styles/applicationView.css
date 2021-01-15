@@ -6,8 +6,16 @@
 }
 .application-div{
     width:25%; 
-    margin: auto
+    float: left;
 }
 .my-application-btn-div{
-    text-align: center
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.application-text-div{
+    width: 73%;
+    float: right;
 }

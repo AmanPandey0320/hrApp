@@ -2,7 +2,7 @@ const express = require('express');
 const route = express.Router();
 const admin = require('../admin');
 const bodyParser = require('body-parser');
-const { error } = require('jquery');
+
 
 const auth = admin.auth();
 const db = admin.firestore();
@@ -48,5 +48,4 @@ route.post('/',(req,res)=>{
         res.status(401).json(error);
     });
 });
-
 module.exports = route;
