@@ -69,6 +69,7 @@ route.post('/accept',async (req,res)=>{
     }).then((user)=>{
         db.collection('employee').doc(eid).set(body).then((result)=>{
             db.collection('company').doc(cid).collection('employee').doc(eid).set(body).then(val =>{
+                db.collection('employee').doc(eid).update({password:password});
                 db.collection('company').doc(cid).collection('verification').doc(eid).delete();
             }).catch(error =>{
                 console.log('company/accept/eemployee/company/cid/employee/eid/db');

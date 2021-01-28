@@ -51,7 +51,10 @@ function signIn(e,p,t){
                 var uid = this.response;
                 // console.log(uid);
                 sessionStorage.setItem('manageHrSessionUID',uid);
-                location.href = 'home';
+                if(t == 'company')
+                location.href ='home';
+                else
+                location.href ='employee/profile';
             }
         }
     };

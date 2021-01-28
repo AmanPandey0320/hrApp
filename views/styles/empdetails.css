@@ -1,47 +1,127 @@
-body{
-    background-color: rgb(250, 248, 244);
+.my-nav{
+    background-color:#f3f3f3 ;
 }
-img{
-    border-radius: 50%;
+.left-div:hover{
+    box-shadow: 2px 2px 7px  lightseagreen;
 }
-.card{
-    box-shadow: 0 2px 2px 0;
-    padding: 10px 6px;
-    margin-right: 0;
-    padding-right: 10px;
-    padding-left: 15px;
+.right-div:hover{
+    box-shadow: 2px 2px 7px  lightseagreen;
 }
-i{
-    margin: 0;
-    margin-right: 5px;
+.middle-div:hover{
+    box-shadow: 2px 2px 7px  lightseagreen;
 }
-hr{
-    margin: 0;
+.left-div{
+    background-color: white;
+    border-color: lightseagreen;
+    border-style: solid;
+    border-width:1px;
+    border-radius:5px;
+    padding:4px;
+    margin: 7px;
+    
 }
-p{
-    margin: 0;
+.right-div{
+    background-color: white;
+    border-color: lightseagreen;
+    border-style: solid;
+    border-width:1px;
+    border-radius:5px;
+    padding:4px;
+    margin:7px;
 }
-.icon{
-    margin: 0;
-    padding: 10px 0;
+.middle-div{
+    background-color: white;
+    border-color: lightseagreen;
+    border-style: solid;
+    border-width:1px;
+    border-radius:5px;
+    padding:4px;
+    margin: 7px;
 }
-h5{
-    margin: 5px 0;
+.my-profile-image{
+    width:20%;
+    height:100%;
+    margin:0px;
+    float:left;
 }
-.edit{
-    font-weight: bold;
-    text-align: right;
+.img{
+    width : 100%;
 }
-.col-8, .col-4{
-    margin: auto;
-    display: block;
+
+@media only screen and (min-width:768px){
+    .left-div{
+        background-color: white;
+        border-color: lightseagreen;
+        border-style: solid;
+        border-width:1px;
+        border-radius:5px;
+        padding:4px;
+        width: 24%;
+        margin: 2px;
+        float:left;
+    }
+    .middle-div{
+        background-color: white;
+        border-color: lightseagreen;
+        border-style: solid;
+        border-width:1px;
+        border-radius:5px;
+        padding:4px;
+        width:50%;
+        margin: 4px;
+        margin-right: 1px;
+        float: left;
+    }
+    .right-div{
+        background-color: white;
+        border-color: lightseagreen;
+        border-style: solid;
+        border-width:1px;
+        border-radius:5px;
+        padding:4px;
+        width: 24%;
+        margin: 4px;
+        margin-left: 1px;
+        margin-right: 3px;
+        float: right;
+    }
 }
-.accordion-button{
-    background-color: rgb(247, 247, 252);
-}
-.container{
-    margin-top: 50px;
-}
-.col-4{
-    padding-left: 20px;
+
+@media only screen and (min-width:1100px){
+    .left-div{
+        background-color: white;
+        border-color: lightseagreen;
+        border-style: solid;
+        border-width:1px;
+        border-radius:5px;
+        padding:4px;
+        width: 24%;
+        margin: 4px;
+        float:left;
+    }
+    .middle-div{
+        background-color: white;
+        border-color: lightseagreen;
+        border-style: solid;
+        border-width:1px;
+        border-radius:5px;
+        padding:4px;
+        width:50%;
+        margin: 4px;
+        margin-right: 1px;
+        float: left;
+    }
+    .right-div{
+        background-color: white;
+        border-color: lightseagreen;
+        border-style: solid;
+        border-width:1px;
+        border-radius:5px;
+        padding:4px;
+        width: 24%;
+        margin: 4px;
+        margin-left: 1px;
+        margin-right: 7px;
+        float: right;
+    }
 }

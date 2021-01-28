@@ -12,6 +12,8 @@ route.get('/signup',(req,res)=>{
     res.sendFile(path.join(__dirname,'./views/employeesignup.html'));
 });
 
-
+route.get('/profile',(req,res)=>{
+    res.sendFile(path.join(__dirname,'./views/empdetails.html'))
+})
 
 module.exports = route
